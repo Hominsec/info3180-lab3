@@ -1,3 +1,41 @@
 body {
     padding-top: 5rem;
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+button {
+    display: inline-block;
+    padding: 8px 16px; 
+    border: none;
+    border-radius: 10px; 
+    background-color: #3498db; 
+    color: #fff;
+    font-size: 14px; 
+    text-align: center;
+    text-decoration: none; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    width: 80px;
+    margin-top: 20px;
+  }
+
+#req{
+    float:right;
+    width: 94%;
+    color: red;
+}
+
+#give_gap{
+    margin-top: 20px;
+}
+
+.short{
+    width:50px;
+}
+
+
+

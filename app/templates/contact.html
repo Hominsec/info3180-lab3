@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Contact Form</h1>
+<hr>
+<p class="lead">Fill in this form to contact the site owners.</p>
+
+<form method="POST" action="{{url_for('contact')}}">
+    <div class="flex-container">
+    {{ form.csrf_token }}
+    <div id="give_gap">
+        {{ form.name.label }}
+        <p id="req">(Required)</p>
+    </div>
+    <p>Please enter your full name</p>
+    <div id="short">{{ form.name(size=20) }}</div>
+    <div id="give_gap">
+        {{ form.email.label }}
+        <p id="req">(Required)</p>
+    </div>
+    <p>Please enter your email address</p>
+    <div id="short">{{ form.email(size=20) }}</div>
+    <div id="give_gap">
+        {{ form.subject.label }}
+        <p id="req">(Required)</p>
+    </div>
+    <p>Please enter the subject for your message</p>
+    <div id="short">{{ form.subject(size=20) }}</div>
+    <div id="give_gap">
+        {{ form.message.label }}
+        <p id="req">(Required)</p>
+    </div>
+    <p>Please enter the message you would like to send</p>
+    <div id="short">{{ form.message(size=20) }}</div>
+    <button type="submit">Send</button>
+    </div>
+   </form>
+{% endblock %}
